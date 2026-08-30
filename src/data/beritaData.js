@@ -1,4 +1,4 @@
-import { asset } from '../utils/asset';
+﻿import { asset } from '../utils/asset';
 
 export const beritaList = [
   {
@@ -32,5 +32,21 @@ export const beritaList = [
     date: "18 Mei 2026",
     excerpt: "IAI Sultra dan Program Studi Teknik Arsitektur UHO menjalin kemitraan pengkajian dan pendokumentasian tipologi arsitektur tradisional suku-suku di Sulawesi Tenggara.",
     image: asset('/assets/img/4.jpg')
+  },
+  {
+    id: 5,
+    title: "Pameran Karya Arsitektur Lokal di Hari Jadi Kota Kendari",
+    category: "Pameran",
+    date: "05 April 2026",
+    excerpt: "IAI Sultra berpartisipasi aktif dalam pameran pembangunan kota dengan menampilkan portofolio desain bangunan publik karya arsitek anggota di wilayah Sulawesi Tenggara.",
+    image: asset('/assets/img/3.jpg')
+  },
+  {
+    id: 6,
+    title: "Pelatihan BIM & Teknologi Digital untuk Arsitek Anggota IAI Sultra",
+    category: "Pelatihan",
+    date: "12 Maret 2026",
+    excerpt: "Workshop intensif pengenalan Building Information Modelling (BIM) bagi arsitek anggota, sebagai upaya meningkatkan kompetensi digital sesuai standar keprofesian nasional.",
+    image: asset('/assets/img/2.jpg')
   }
 ];

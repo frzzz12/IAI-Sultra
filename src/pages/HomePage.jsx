@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, ShieldCheck, Users, Calendar, MapPin } from 'lucide-react';
+import { ArrowRight, Award, ShieldCheck, Users, MapPin, Eye, Target } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
 import KaryaSlider from '../components/KaryaSlider';
 import { beritaList } from '../data/beritaData';
@@ -34,7 +34,7 @@ export default function HomePage() {
               </p>
 
               <p className="text-base text-brand-gray-600 leading-relaxed">
-                Dengan semangat motto <em>"Veracity – Variety – Validity" (Kesungguhan – Keberagaman – Pengesahan)</em>, IAI Sultra terus menggalang kekuatan anggota dan bersinergi aktif bersama Pemerintah Daerah dalam mewujudkan tata kota yang berkelas serta berkelanjutan.
+                Dengan semangat motto <em>"Veracity - Variety - Validity" (Kesungguhan - Keberagaman - Pengesahan)</em>, IAI Sultra terus menggalang kekuatan anggota dan bersinergi aktif bersama Pemerintah Daerah dalam mewujudkan tata kota yang berkelas serta berkelanjutan.
               </p>
 
               <div className="pt-2">
@@ -63,21 +63,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. VISI & MISI PREVIEW (Maroon Gradient Accent with Aesthetic Waves) */}
+      {/* 3. VISI & MISI PREVIEW */}
       <section className="bg-gradient-to-br from-[#66001a] via-maroon to-[#4a0013] text-white relative overflow-hidden">
-        {/* Top Wave Transition (More pronounced & wavy) */}
-        <div className="w-full overflow-hidden leading-none -mt-px pointer-events-none">
-          <svg
-            className="relative block w-full h-16 sm:h-24 lg:h-28 text-brand-warm"
-            viewBox="0 0 1440 180"
-            fill="none"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,0 L1440,0 L1440,80 C1300,160 1120,175 940,105 C760,35 560,165 380,135 C200,105 100,30 0,85 Z"
-              fill="currentColor"
-            />
-          </svg>
+        {/* Top Wave — animated */}
+        <div className="w-full overflow-hidden leading-none -mt-px pointer-events-none h-16 sm:h-24 lg:h-28">
+          <div className="flex h-full" style={{width:'200%', animation:'waveScroll 10s linear infinite', willChange:'transform'}}>
+            <svg className="block shrink-0 text-brand-warm" style={{width:'50%',height:'100%'}} viewBox="0 0 1440 180" fill="none" preserveAspectRatio="none">
+              <path d="M0,0 L1440,0 L1440,80 C1200,150 960,10 720,80 C480,150 240,10 0,80 Z" fill="currentColor"/>
+            </svg>
+            <svg className="block shrink-0 text-brand-warm" style={{width:'50%',height:'100%'}} viewBox="0 0 1440 180" fill="none" preserveAspectRatio="none">
+              <path d="M0,0 L1440,0 L1440,80 C1200,150 960,10 720,80 C480,150 240,10 0,80 Z" fill="currentColor"/>
+            </svg>
+          </div>
         </div>
 
         {/* Glow */}
@@ -89,7 +86,7 @@ export default function HomePage() {
               Landasan Organisasi
             </span>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
-              Visi & Misi IAI Sultra
+              Visi &amp; Misi IAI Sultra
             </h2>
             <p className="text-white/80 text-sm sm:text-base">
               Arah dan cita-cita strategis dalam menjalankan amanah organisasi profesi arsitektur.
@@ -99,7 +96,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Card Visi */}
             <div className="bg-white text-brand-gray-800 rounded-brand-lg p-8 sm:p-10 shadow-card border-l-4 border-maroon hover:-translate-y-1 transition-all duration-300">
-              <h3 className="font-heading font-bold text-2xl text-brand-black mb-4">
+              <h3 className="font-heading font-bold text-2xl text-brand-black mb-4 flex items-center gap-2.5">
+                <Eye className="w-7 h-7 text-maroon" />
                 Visi
               </h3>
               <p className="text-brand-gray-600 text-sm sm:text-base leading-relaxed mb-0">
@@ -109,7 +107,8 @@ export default function HomePage() {
 
             {/* Card Misi */}
             <div className="bg-white text-brand-gray-800 rounded-brand-lg p-8 sm:p-10 shadow-card border-l-4 border-maroon hover:-translate-y-1 transition-all duration-300">
-              <h3 className="font-heading font-bold text-2xl text-brand-black mb-4">
+              <h3 className="font-heading font-bold text-2xl text-brand-black mb-4 flex items-center gap-2.5">
+                <Target className="w-7 h-7 text-maroon" />
                 Misi
               </h3>
               <p className="text-brand-gray-600 text-sm sm:text-base leading-relaxed mb-0">
@@ -119,19 +118,16 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Bottom Wave Transition (More pronounced & wavy) */}
-        <div className="w-full overflow-hidden leading-none -mb-px pointer-events-none">
-          <svg
-            className="relative block w-full h-16 sm:h-24 lg:h-28 text-white"
-            viewBox="0 0 1440 180"
-            fill="none"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,180 L1440,180 L1440,95 C1300,20 1140,150 960,95 C780,40 580,165 400,75 C220,-15 100,125 0,65 Z"
-              fill="currentColor"
-            />
-          </svg>
+        {/* Bottom Wave — animated (arah berlawanan, kecepatan berbeda) */}
+        <div className="w-full overflow-hidden leading-none -mb-px pointer-events-none h-16 sm:h-24 lg:h-28">
+          <div className="flex h-full" style={{width:'200%', animation:'waveScrollReverse 14s linear infinite', willChange:'transform'}}>
+            <svg className="block shrink-0 text-white" style={{width:'50%',height:'100%'}} viewBox="0 0 1440 180" fill="none" preserveAspectRatio="none">
+              <path d="M0,100 C240,30 480,170 720,100 C960,30 1200,170 1440,100 L1440,180 L0,180 Z" fill="currentColor"/>
+            </svg>
+            <svg className="block shrink-0 text-white" style={{width:'50%',height:'100%'}} viewBox="0 0 1440 180" fill="none" preserveAspectRatio="none">
+              <path d="M0,100 C240,30 480,170 720,100 C960,30 1200,170 1440,100 L1440,180 L0,180 Z" fill="currentColor"/>
+            </svg>
+          </div>
         </div>
       </section>
 
@@ -139,66 +135,101 @@ export default function HomePage() {
       <KaryaSlider />
 
       {/* 5. BERITA TERBARU */}
-      <section className="py-20 sm:py-28 bg-brand-warm">
-        <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
+      <section className="relative py-20 sm:py-28 bg-white overflow-hidden">
+        {/* Tekstur Tenun Sultra - diagonal stepped (motif X khas tenun Sultra) */}
+        <svg
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ opacity: 0.09 }}
+        >
+          <defs>
+            <pattern id="tenun" x="0" y="0" width="100" height="80" patternUnits="userSpaceOnUse">
+              {/* Border zigzag atas — segitiga naik */}
+              <polyline points="0,8 5,0 10,8 15,0 20,8 25,0 30,8 35,0 40,8 45,0 50,8 55,0 60,8 65,0 70,8 75,0 80,8 85,0 90,8 95,0 100,8" stroke="#6b0020" strokeWidth="2.5" fill="none"/>
+              <line x1="0" y1="8" x2="100" y2="8" stroke="#6b0020" strokeWidth="1"/>
+              {/* Border zigzag bawah — segitiga naik dari bawah */}
+              <polyline points="0,72 5,80 10,72 15,80 20,72 25,80 30,72 35,80 40,72 45,80 50,72 55,80 60,72 65,80 70,72 75,80 80,72 85,80 90,72 95,80 100,72" stroke="#6b0020" strokeWidth="2.5" fill="none"/>
+              <line x1="0" y1="72" x2="100" y2="72" stroke="#6b0020" strokeWidth="1"/>
+              {/* Motif badan — diagonal stepped membentuk X (khas tenun Sultra) */}
+              {/* TL → BR (tangga turun-kanan) */}
+              <path d="M20,10 H25 V15 H30 V20 H35 V25 H40 V30 H45 V35 H50 V40 H55 V45 H60 V50 H65 V55 H70 V60 H75 V65 H80 V70" stroke="#6b0020" strokeWidth="2" fill="none" strokeLinecap="square"/>
+              {/* TR → BL (tangga turun-kiri) */}
+              <path d="M80,10 H75 V15 H70 V20 H65 V25 H60 V30 H55 V35 H50 V40 H45 V45 H40 V50 H35 V55 H30 V60 H25 V65 H20 V70" stroke="#6b0020" strokeWidth="2" fill="none" strokeLinecap="square"/>
+              {/* Diamond tengah */}
+              <path d="M50,30 L60,40 L50,50 L40,40 Z" stroke="#6b0020" strokeWidth="1.5" fill="none"/>
+              <path d="M50,36 L54,40 L50,44 L46,40 Z" fill="#6b0020"/>
+              {/* Aksen diamond kiri & kanan */}
+              <path d="M10,40 L15,35 L20,40 L15,45 Z" stroke="#6b0020" strokeWidth="1.2" fill="none"/>
+              <path d="M80,40 L85,35 L90,40 L85,45 Z" stroke="#6b0020" strokeWidth="1.2" fill="none"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#tenun)"/>
+        </svg>
+
+        <div className="relative z-10 max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[2.5px] text-maroon block mb-2">
-                Publikasi & Kabar
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-brand-black mb-2">
-                Berita & Kegiatan Terbaru
+              <p className="text-xs font-semibold uppercase tracking-[2.5px] text-maroon mb-2">Publikasi &amp; Kabar</p>
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-brand-black leading-tight">
+                Berita &amp; Kegiatan Terbaru
               </h2>
-              <p className="text-brand-gray-600 text-sm sm:text-base">
+              <p className="text-brand-gray-600 text-sm mt-2">
                 Ikuti perkembangan terkini dari kegiatan dan program IAI Sulawesi Tenggara.
               </p>
             </div>
             <Link
               to="/kegiatan/berita"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-maroon hover:text-maroon-dark self-start sm:self-auto"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-maroon hover:text-maroon-dark self-start sm:self-auto shrink-0"
             >
-              <span>Semua Berita</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              Semua Berita <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {beritaList.slice(0, 2).map((berita) => (
-              <div
+          {/* Grid 6 kartu */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {beritaList.slice(0, 6).map((berita) => (
+              <Link
                 key={berita.id}
-                className="bg-white border border-brand-gray-200 rounded-brand-lg overflow-hidden shadow-subtle hover:shadow-card transition-all duration-300 flex flex-col group"
+                to="/kegiatan/berita"
+                className="group block bg-white border border-gray-200 overflow-hidden hover:border-maroon/30 transition-colors duration-300"
+                style={{ borderRadius: '2px' }}
               >
-                <div className="w-full h-64 overflow-hidden bg-brand-gray-100 relative">
+                {/* Thumbnail */}
+                <div className="w-full h-48 overflow-hidden bg-gray-100">
                   <img
                     src={berita.image}
                     alt={berita.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
-                <div className="p-8 flex-1 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center gap-2 text-xs text-brand-gray-400 uppercase tracking-wider mb-3">
-                      <Calendar className="w-3.5 h-3.5" />
-                      <span>{berita.date}</span>
-                    </div>
-                    <h3 className="font-heading font-bold text-xl text-brand-black group-hover:text-maroon transition-colors line-clamp-2 mb-3 leading-snug">
-                      {berita.title}
-                    </h3>
-                    <p className="text-brand-gray-600 text-sm sm:text-base line-clamp-3 leading-relaxed mb-0">
-                      {berita.excerpt}
-                    </p>
+
+                {/* Konten */}
+                <div className="p-5">
+                  {/* Kategori + tanggal */}
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] font-bold uppercase tracking-[1.5px] text-maroon">
+                      {berita.category}
+                    </span>
+                    <span className="text-[10px] text-gray-400 tracking-wide">{berita.date}</span>
                   </div>
-                  <div className="pt-6 mt-6 border-t border-brand-gray-100">
-                    <Link
-                      to="/kegiatan/berita"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-maroon hover:text-maroon-dark uppercase tracking-wider"
-                    >
-                      <span>Baca Selengkapnya</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
+
+                  {/* Judul */}
+                  <h3 className="font-heading font-bold text-[15px] leading-snug text-brand-black group-hover:text-maroon transition-colors line-clamp-2 mb-2">
+                    {berita.title}
+                  </h3>
+
+                  {/* Excerpt */}
+                  <p className="text-gray-500 text-[13px] leading-relaxed line-clamp-2">
+                    {berita.excerpt}
+                  </p>
+
+                  {/* Link baca */}
+                  <div className="mt-4 pt-3 border-t border-gray-100 flex items-center gap-1 text-[11px] font-semibold uppercase tracking-widest text-maroon">
+                    Baca Selengkapnya <ArrowRight className="w-3 h-3" />
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

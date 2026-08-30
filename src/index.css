@@ -80,3 +80,14 @@
 .animate-hero-fade {
   animation: heroFadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
+/* Wave scroll animation */
+@keyframes waveScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes waveScrollReverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
