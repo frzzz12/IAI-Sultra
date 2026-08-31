@@ -235,6 +235,74 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 5.5 MITRA & REKANAN */}
+      <section className="py-14 sm:py-16 bg-white border-t border-b border-brand-gray-200 overflow-hidden">
+        {/* Title — tetap di dalam container */}
+        <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 mb-8 sm:mb-10 text-center">
+          <span className="text-xs font-semibold uppercase tracking-[2.5px] text-maroon block mb-2">
+            Mitra & Rekanan
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-brand-black">
+            Didukung oleh Industri Terkemuka
+          </h2>
+        </div>
+
+        {/* Track — full width, di luar container agar looping tanpa celah */}
+        <div className="relative">
+          {/* Fade kiri */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-white to-transparent z-10" />
+          {/* Fade kanan */}
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-white to-transparent z-10" />
+
+          {/* 3 set identik → animasi -33.33% = seamless */}
+          <div
+            className="flex"
+            style={{
+              animation: 'marqueeScroll 18s linear infinite',
+              width: 'max-content',
+            }}
+          >
+            {[
+              { name: 'Dekkson', logo: '/assets/img/logo-dekkson.png', url: 'https://share.google/R4mPyilcZFYLrgTCo' },
+              { name: 'ACP Seven', logo: '/assets/img/logo-acp-seven.png', url: 'https://share.google/0u5JW7UmwsgIJ3uZW' },
+              { name: 'Onduline Indonesia', logo: '/assets/img/logo-onduline.png', url: 'https://share.google/J2HInnDFDwe6sJi8w' },
+              { name: 'Nippon Paint', logo: '/assets/img/logo-nippont-paint.png', url: 'https://share.google/u8DXtsYfPKzqMu1UE' },
+              /* Set 2 */
+              { name: 'Dekkson', logo: '/assets/img/logo-dekkson.png', url: 'https://share.google/R4mPyilcZFYLrgTCo' },
+              { name: 'ACP Seven', logo: '/assets/img/logo-acp-seven.png', url: 'https://share.google/0u5JW7UmwsgIJ3uZW' },
+              { name: 'Onduline Indonesia', logo: '/assets/img/logo-onduline.png', url: 'https://share.google/J2HInnDFDwe6sJi8w' },
+              { name: 'Nippon Paint', logo: '/assets/img/logo-nippont-paint.png', url: 'https://share.google/u8DXtsYfPKzqMu1UE' },
+              /* Set 3 */
+              { name: 'Dekkson', logo: '/assets/img/logo-dekkson.png', url: 'https://share.google/R4mPyilcZFYLrgTCo' },
+              { name: 'ACP Seven', logo: '/assets/img/logo-acp-seven.png', url: 'https://share.google/0u5JW7UmwsgIJ3uZW' },
+              { name: 'Onduline Indonesia', logo: '/assets/img/logo-onduline.png', url: 'https://share.google/J2HInnDFDwe6sJi8w' },
+              { name: 'Nippon Paint', logo: '/assets/img/logo-nippont-paint.png', url: 'https://share.google/u8DXtsYfPKzqMu1UE' },
+            ].map((partner, i) => (
+              <a
+                key={i}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center gap-3 shrink-0 group px-4 sm:px-6"
+                title={partner.name}
+              >
+                <div className="w-52 sm:w-64 h-28 sm:h-36 rounded-brand-lg border border-brand-gray-200 bg-white flex items-center justify-center px-6 py-4 shadow-subtle group-hover:shadow-card group-hover:-translate-y-1 transition-all duration-300">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <span className="text-xs sm:text-sm font-medium text-brand-gray-600 group-hover:text-maroon transition-colors text-center whitespace-nowrap">
+                  {partner.name}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* 6. CALL TO ACTION BANNER */}
       <section className="py-16 sm:py-20 bg-gradient-to-r from-maroon-dark via-maroon to-[#6b001b] text-white relative overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 text-center relative z-10">

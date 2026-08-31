@@ -34,6 +34,8 @@ export default function Navbar() {
 
   const isTentangActive = ['/tentang/profil', '/tentang/visi-misi', '/tentang/sejarah'].includes(location.pathname);
   const isKegiatanActive = ['/kegiatan/program-kerja', '/kegiatan/berita'].includes(location.pathname);
+  const isKeanggotaanActive = ['/keanggotaan'].includes(location.pathname);
+  const isHelpDeskActive = ['/helpdesk-stra'].includes(location.pathname);
 
   const navBackground = isHome
     ? isScrolled
@@ -129,6 +131,38 @@ export default function Navbar() {
                 <div className="bg-white rounded-brand-lg shadow-card border border-brand-gray-100 p-2 text-brand-gray-800">
                   <Link to="/kegiatan/program-kerja" className="block px-4 py-2.5 rounded-brand text-sm hover:bg-maroon-subtle hover:text-maroon transition-colors">Program Kerja</Link>
                   <Link to="/kegiatan/berita" className="block px-4 py-2.5 rounded-brand text-sm hover:bg-maroon-subtle hover:text-maroon transition-colors">Berita &amp; Kegiatan</Link>
+                </div>
+              </div>
+            </li>
+
+            {/* Keanggotaan Dropdown */}
+            <li className="relative group">
+              <button className={dropdownBtnClass(isKeanggotaanActive)}>
+                Keanggotaan
+                <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                {isKeanggotaanActive && <span className="absolute bottom-0 left-0 w-full h-[2px] bg-maroon rounded-full" />}
+              </button>
+              <div className="absolute top-full left-0 w-64 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
+                <div className="bg-white rounded-brand-lg shadow-card border border-brand-gray-100 p-2 text-brand-gray-800">
+                  <Link to="/keanggotaan#pendaftaran" className="block px-4 py-2.5 rounded-brand text-sm hover:bg-maroon-subtle hover:text-maroon transition-colors">Pendaftaran Anggota Baru</Link>
+                  <Link to="/keanggotaan#tagihan" className="block px-4 py-2.5 rounded-brand text-sm hover:bg-maroon-subtle hover:text-maroon transition-colors">Cek Tagihan Iuran</Link>
+                  <Link to="/keanggotaan#cicilan" className="block px-4 py-2.5 rounded-brand text-sm hover:bg-maroon-subtle hover:text-maroon transition-colors">Program Cicilan Iuran</Link>
+                </div>
+              </div>
+            </li>
+
+            {/* Help Desk STRA Dropdown */}
+            <li className="relative group">
+              <button className={dropdownBtnClass(isHelpDeskActive)}>
+                Help Desk STRA
+                <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                {isHelpDeskActive && <span className="absolute bottom-0 left-0 w-full h-[2px] bg-maroon rounded-full" />}
+              </button>
+              <div className="absolute top-full left-0 w-64 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200">
+                <div className="bg-white rounded-brand-lg shadow-card border border-brand-gray-100 p-2 text-brand-gray-800">
+                  <Link to="/helpdesk-stra" className="block px-4 py-2.5 rounded-brand text-sm hover:bg-maroon-subtle hover:text-maroon transition-colors">Pendaftaran ODS</Link>
+                  <Link to="/helpdesk-stra" className="block px-4 py-2.5 rounded-brand text-sm hover:bg-maroon-subtle hover:text-maroon transition-colors">Kalkulator Nilai KUM</Link>
+                  <Link to="/helpdesk-stra" className="block px-4 py-2.5 rounded-brand text-sm hover:bg-maroon-subtle hover:text-maroon transition-colors">Cek Jumlah KUM Saat Ini</Link>
                 </div>
               </div>
             </li>
@@ -257,6 +291,46 @@ export default function Navbar() {
               <div className="pl-4 pr-1 pb-1 flex flex-col gap-0.5 border-l-2 border-maroon/30 ml-3 mt-1">
                 <Link to="/kegiatan/program-kerja" className="block py-2 px-3 text-sm rounded-brand hover:bg-maroon-subtle hover:text-maroon text-brand-gray-600">Program Kerja</Link>
                 <Link to="/kegiatan/berita" className="block py-2 px-3 text-sm rounded-brand hover:bg-maroon-subtle hover:text-maroon text-brand-gray-600">Berita &amp; Kegiatan</Link>
+              </div>
+            </div>
+          </li>
+
+          {/* Accordion Keanggotaan */}
+          <li>
+            <button
+              onClick={() => toggleMobileDropdown('keanggotaan')}
+              className={`w-full flex items-center justify-between py-3 px-3 rounded-brand transition-colors ${
+                isKeanggotaanActive ? 'text-maroon font-semibold bg-maroon-subtle/50' : 'text-brand-gray-800 hover:bg-brand-gray-100'
+              }`}
+            >
+              <span>Keanggotaan</span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'keanggotaan' ? 'rotate-180 text-maroon' : ''}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-200 ${openDropdown === 'keanggotaan' ? 'max-h-40' : 'max-h-0'}`}>
+              <div className="pl-4 pr-1 pb-1 flex flex-col gap-0.5 border-l-2 border-maroon/30 ml-3 mt-1">
+                <Link to="/keanggotaan" className="block py-2 px-3 text-sm rounded-brand hover:bg-maroon-subtle hover:text-maroon text-brand-gray-600">Pendaftaran Anggota Baru</Link>
+                <Link to="/keanggotaan" className="block py-2 px-3 text-sm rounded-brand hover:bg-maroon-subtle hover:text-maroon text-brand-gray-600">Cek Tagihan Iuran</Link>
+                <Link to="/keanggotaan" className="block py-2 px-3 text-sm rounded-brand hover:bg-maroon-subtle hover:text-maroon text-brand-gray-600">Program Cicilan Iuran</Link>
+              </div>
+            </div>
+          </li>
+
+          {/* Accordion Help Desk STRA */}
+          <li>
+            <button
+              onClick={() => toggleMobileDropdown('helpdesk')}
+              className={`w-full flex items-center justify-between py-3 px-3 rounded-brand transition-colors ${
+                isHelpDeskActive ? 'text-maroon font-semibold bg-maroon-subtle/50' : 'text-brand-gray-800 hover:bg-brand-gray-100'
+              }`}
+            >
+              <span>Help Desk STRA</span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === 'helpdesk' ? 'rotate-180 text-maroon' : ''}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-200 ${openDropdown === 'helpdesk' ? 'max-h-40' : 'max-h-0'}`}>
+              <div className="pl-4 pr-1 pb-1 flex flex-col gap-0.5 border-l-2 border-maroon/30 ml-3 mt-1">
+                <Link to="/helpdesk-stra" className="block py-2 px-3 text-sm rounded-brand hover:bg-maroon-subtle hover:text-maroon text-brand-gray-600">Pendaftaran ODS</Link>
+                <Link to="/helpdesk-stra" className="block py-2 px-3 text-sm rounded-brand hover:bg-maroon-subtle hover:text-maroon text-brand-gray-600">Kalkulator Nilai KUM</Link>
+                <Link to="/helpdesk-stra" className="block py-2 px-3 text-sm rounded-brand hover:bg-maroon-subtle hover:text-maroon text-brand-gray-600">Cek Jumlah KUM Saat Ini</Link>
               </div>
             </div>
           </li>

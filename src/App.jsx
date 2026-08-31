@@ -14,6 +14,8 @@ import ProgramKerjaPage from './pages/ProgramKerjaPage';
 import BeritaPage from './pages/BeritaPage';
 import GaleriPage from './pages/GaleriPage';
 import KontakPage from './pages/KontakPage';
+import KeanggotaanPage from './pages/KeanggotaanPage';
+import HelpDeskPage from './pages/HelpDeskPage';
 
 export default function App() {
   return (
@@ -32,6 +34,8 @@ export default function App() {
             <Route path="/kegiatan/berita" element={<BeritaPage />} />
             <Route path="/galeri" element={<GaleriPage />} />
             <Route path="/kontak" element={<KontakPage />} />
+            <Route path="/keanggotaan" element={<KeanggotaanPage />} />
+            <Route path="/helpdesk-stra" element={<HelpDeskPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

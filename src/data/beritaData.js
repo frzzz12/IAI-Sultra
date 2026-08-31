@@ -1,4 +1,4 @@
-﻿import { asset } from '../utils/asset';
+import { asset } from '../utils/asset';
 
 export const beritaList = [
   {
@@ -27,11 +27,11 @@ export const beritaList = [
   },
   {
     id: 4,
-    title: "Kolaborasi Riset Arsitektur Vernakular Bersama Universitas Halu Oleo",
-    category: "Akademis & Riset",
-    date: "18 Mei 2026",
-    excerpt: "IAI Sultra dan Program Studi Teknik Arsitektur UHO menjalin kemitraan pengkajian dan pendokumentasian tipologi arsitektur tradisional suku-suku di Sulawesi Tenggara.",
-    image: asset('/assets/img/4.jpg')
+    title: "4th ASEAN Architect Congress: Mendorong Kolaborasi Arsitek se-Asia Tenggara",
+    category: "Internasional",
+    date: "27 Juli 2023",
+    excerpt: "ASEAN Architects Congress (AAC) ke-4 digelar di Makassar, membahas isu regulasi dan mobilitas pekerja arsitek se-ASEAN bertema 'Embracing the Future: Mobility + Collaboration Part 4'.",
+    image: asset('/assets/img/asean-congress.jpeg')
   },
   {
     id: 5,

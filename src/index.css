@@ -91,3 +91,9 @@
   0%   { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
+
+/* Partner marquee — 3 set identik, gerak -33.33% = 1 set penuh, seamless */
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
