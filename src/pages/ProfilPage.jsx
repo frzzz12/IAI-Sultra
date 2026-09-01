@@ -163,12 +163,12 @@ export default function ProfilPage() {
 
               {/* Tanda tangan */}
               <div className="pt-4 border-t border-brand-gray-200">
-                <p className="text-sm text-brand-gray-600">Kendari, 2024</p>
+                <p className="text-sm text-brand-gray-600">Kendari, 2026</p>
                 <p className="font-heading font-bold text-lg text-brand-black mt-2">
-                  H. Arief Saleh Sjamsu, IAI
+                  Ar. I Made Krisna A.D., IAI
                 </p>
                 <p className="text-sm text-maroon font-medium">
-                  Ketua IAI Daerah Sulawesi Tenggara
+                  Calon Ketua IAI Daerah Sulawesi Tenggara
                 </p>
               </div>
             </div>
