@@ -60,8 +60,8 @@ export default function ProfilPage() {
       {/* Page Header */}
       <PageHeader
         label="Tentang Kami"
-        title="Sambutan Ketua IAI Sultra"
-        desc="Pesan dan harapan dari Ketua Ikatan Arsitek Indonesia Daerah Sulawesi Tenggara."
+        title="Sambutan Calon Ketua IAI Sultra"
+        desc="Pesan dan harapan dari Calon Ketua Ikatan Arsitek Indonesia Daerah Sulawesi Tenggara Periode 2026–2030."
         breadcrumbs={[{ label: 'Tentang', to: '/tentang/profil' }, { label: 'Sambutan Ketua' }]}
       />
 
@@ -76,7 +76,7 @@ export default function ProfilPage() {
                 <div className="rounded-brand-lg overflow-hidden shadow-card border border-brand-gray-200 h-[420px]">
                   <img
                     src={asset('/assets/img/ketua-iai-sultra.png')}
-                    alt="Ketua IAI Sulawesi Tenggara"
+                    alt="Calon Ketua IAI Sulawesi Tenggara - Ar. I Made Krisna A.D., IAI"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
@@ -85,13 +85,13 @@ export default function ProfilPage() {
               {/* Nama & Jabatan */}
               <div className="text-center lg:text-left w-full max-w-sm lg:max-w-full">
                 <p className="text-xs font-semibold uppercase tracking-[2.5px] text-maroon mb-1">
-                  Ketua IAI Sulawesi Tenggara
+                  Calon Ketua IAI Sulawesi Tenggara
                 </p>
                 <h3 className="font-heading font-bold text-xl sm:text-2xl text-brand-black leading-snug">
-                  H. Arief Saleh Sjamsu, IAI
+                  Ar. I Made Krisna A.D., IAI
                 </h3>
                 <p className="text-sm text-brand-gray-600 mt-1">
-                  Periode 2022 – 2026
+                  Periode 2026 – 2030
                 </p>
               </div>
 
