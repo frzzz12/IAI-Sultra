@@ -95,25 +95,37 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Card Visi */}
-            <div className="bg-white text-brand-gray-800 rounded-brand-lg p-8 sm:p-10 shadow-card border-l-4 border-maroon hover:-translate-y-1 transition-all duration-300">
-              <h3 className="font-heading font-bold text-2xl text-brand-black mb-4 flex items-center gap-2.5">
-                <Eye className="w-7 h-7 text-maroon" />
-                Visi
-              </h3>
-              <p className="text-brand-gray-600 text-sm sm:text-base leading-relaxed mb-0">
-                Menjadi organisasi yang profesional dalam menjalankan praktek arsitek yang beretika dan bertanggung jawab demi terwujudnya arsitek professional, inovatif, berdaya saing dan siap menghadapi Masyarakat Ekonomi Asean (MEA).
-              </p>
+            <div className="bg-white text-brand-gray-800 rounded-brand-lg p-8 sm:p-10 shadow-card border-l-4 border-maroon hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <h3 className="font-heading font-bold text-2xl text-brand-black mb-4 flex items-center gap-2.5">
+                  <Eye className="w-7 h-7 text-maroon" />
+                  Visi
+                </h3>
+                <p className="text-brand-gray-600 text-sm sm:text-base leading-relaxed">
+                  Mewujudkan IAI SULTRA yang <strong className="font-semibold text-brand-black">Mandiri, Transparan, Profesional, Adaptif dan Kolaboratif</strong> untuk meningkatkan pelayanan, kompetensi, serta kesejahteraan anggota dan memperkuat peran profesi arsitek dalam pembangunan Sulawesi Tenggara.
+                </p>
+              </div>
+              <a href="/#/tentang/visi-misi" className="text-xs font-semibold uppercase tracking-wider text-maroon hover:underline mt-4 block">
+                Lihat Visi &amp; Misi Lengkap →
+              </a>
             </div>
 
             {/* Card Misi */}
-            <div className="bg-white text-brand-gray-800 rounded-brand-lg p-8 sm:p-10 shadow-card border-l-4 border-maroon hover:-translate-y-1 transition-all duration-300">
-              <h3 className="font-heading font-bold text-2xl text-brand-black mb-4 flex items-center gap-2.5">
-                <Target className="w-7 h-7 text-maroon" />
-                Misi
-              </h3>
-              <p className="text-brand-gray-600 text-sm sm:text-base leading-relaxed mb-0">
-                Menggalang kekuatan anggota sebagai potensi dan bergandengan-tangan dengan semua pihak khususnya Pemerintah secara profesional.
-              </p>
+            <div className="bg-white text-brand-gray-800 rounded-brand-lg p-8 sm:p-10 shadow-card border-l-4 border-maroon hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <h3 className="font-heading font-bold text-2xl text-brand-black mb-4 flex items-center gap-2.5">
+                  <Target className="w-7 h-7 text-maroon" />
+                  Misi
+                </h3>
+                <ul className="space-y-2 text-brand-gray-600 text-sm sm:text-base mb-0">
+                  <li className="flex items-start gap-2"><span className="text-maroon font-bold shrink-0 mt-0.5">1.</span><span>Kemandirian dan penguatan sistem keuangan organisasi yang mandiri dan berkelanjutan.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-maroon font-bold shrink-0 mt-0.5">2.</span><span>Transparansi anggaran dan kemudahan pembayaran iuran anggota secara digital.</span></li>
+                  <li className="flex items-start gap-2"><span className="text-maroon font-bold shrink-0 mt-0.5">3.</span><span>Akselerasi penerbitan STRA dan penguatan lisensi Arsitek Sulawesi Tenggara.</span></li>
+                </ul>
+              </div>
+              <a href="/#/tentang/visi-misi" className="text-xs font-semibold uppercase tracking-wider text-maroon hover:underline mt-4 block">
+                Lihat 8 Misi Lengkap →
+              </a>
             </div>
           </div>
         </div>

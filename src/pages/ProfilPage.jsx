@@ -73,10 +73,12 @@ export default function ProfilPage() {
             {/* Left — Foto & Identitas Ketua */}
             <div className="lg:col-span-4 flex flex-col items-center lg:items-start gap-6">
               <div className="w-full max-w-sm lg:max-w-full">
-                <div className="rounded-brand-lg overflow-hidden shadow-card border border-brand-gray-200 bg-maroon h-[420px] flex items-center justify-center">
-                  <span className="text-white font-heading font-bold text-8xl select-none tracking-tight">
-                    AS
-                  </span>
+                <div className="rounded-brand-lg overflow-hidden shadow-card border border-brand-gray-200 h-[420px]">
+                  <img
+                    src={asset('/assets/img/ketua-iai-sultra.png')}
+                    alt="Ketua IAI Sulawesi Tenggara"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
               </div>
 
