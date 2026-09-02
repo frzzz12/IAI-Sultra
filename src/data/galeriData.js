@@ -56,7 +56,7 @@ export const galeriDokumentasi = [
   { id: 1, title: "Musyawarah Daerah IAI Sultra", category: "Organisasi", image: asset('/assets/img/1.jpg') },
   { id: 2, title: "Penataran Kode Etik & Kaidah Tata Laku", category: "Pelatihan", image: asset('/assets/img/2.jpg') },
   { id: 3, title: "Kunjungan Lapangan & Sayembara Desain", category: "Kegiatan", image: asset('/assets/img/3.jpg') },
-  { id: 4, title: "Kerjasama Akademis Arsitektur UHO", category: "Kemitraan", image: asset('/assets/img/4.jpg') },
+  { id: 4, title: "Kerjasama Akademis Arsitektur UHO", category: "Kemitraan", image: asset('/assets/img/7.jpeg') },
   { id: 5, title: "Sosialisasi UU Arsitek No. 6/2017", category: "Sosialisasi", image: asset('/assets/img/5.jpg') },
   { id: 6, title: "Pameran Karya Arsitektur Kendari", category: "Pameran", image: asset('/assets/img/kendari-convention-centre.png') }
 ];

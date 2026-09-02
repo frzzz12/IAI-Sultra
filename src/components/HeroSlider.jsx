@@ -4,10 +4,8 @@ import { ArrowRight } from 'lucide-react';
 import { asset } from '../utils/asset';
 
 const slides = [
-  { image: '/assets/img/1.jpg', title: 'Ikatan Arsitek Indonesia', region: 'Sulawesi Tenggara' },
-  { image: '/assets/img/2.jpg', title: 'Ikatan Arsitek Indonesia', region: 'Sulawesi Tenggara' },
-  { image: '/assets/img/3.jpg', title: 'Ikatan Arsitek Indonesia', region: 'Sulawesi Tenggara' },
-  { image: '/assets/img/4.jpg', title: 'Ikatan Arsitek Indonesia', region: 'Sulawesi Tenggara' },
+  { image: '/assets/img/5.jpg', title: 'Ikatan Arsitek Indonesia', region: 'Sulawesi Tenggara' },
+  { image: '/assets/img/7.jpeg', title: 'Ikatan Arsitek Indonesia', region: 'Sulawesi Tenggara' },
 ];
 
 export default function HeroSlider() {
